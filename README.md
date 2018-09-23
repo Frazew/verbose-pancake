@@ -34,4 +34,4 @@ Les commandes utiles sont les suivantes :
 5. Vous générez le pdf avec `genpdf`
 6. ???
 7. Enjoy!
-(8. Retour à l'étape 4 pour faire d'autres writeups sur ce même ctf)
+8. (Retour à l'étape 4 pour faire d'autres writeups sur ce même ctf)
