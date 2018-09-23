@@ -2,8 +2,8 @@
 
 function setup_template() {
 	cp $TOOLS_PATH/template.md.defaults $TOOLS_PATH/template.md
-	sed -i.bak "s#<titrewriteup>#$1#" $TOOLS_PATH/template.md
-	sed -i.bak "s#<pseudo>#$2#" $TOOLS_PATH/template.md
+	sed -i "s#<titrewriteup>#$1#" $TOOLS_PATH/template.md
+	sed -i "s#<pseudo>#$2#" $TOOLS_PATH/template.md
 }
 echo "Installation automagique d'un environnement pandoc swaggué"
 echo "pour les writups de CTF HackademINT"
@@ -34,11 +34,13 @@ echo "Si tout s'est bien passé, l'environnement de base est prêt"
 echo "On peut maintenant sourcer source.sh"
 . source.sh
 echo "Et configurer le template"
-read -e -p "Nom du writeup [Example writeup]: " WTUPNAME
-WTUPNAME=${WTUPNAME:-"Example writeup"}
-read -e -p "Pseudo [Patrick]: " PSEUDO
-PSEUDO=${PSEUDO:-Patrick}
-setup_template $WTUPNAME $PSEUDO
+WTUPNAME_DEFAULT="Default writeup"
+read -e -p "Nom du writeup [$WTUPNAME_DEFAULT]: " WTUPNAME
+[ -z "$WTUPNAME" ] && WTUPNAME="$WTUPNAME_DEFAULT"
+PSEUDO_DEFAULT="Patrick"
+read -e -p "Pseudo [$PSEUDO_DEFAULT]: " PSEUDO
+[ -z "$PSEUDO" ] && PSEUDO="$PSEUDO_DEFAULT"
+setup_template "$WTUPNAME" "$PSEUDO"
 
 echo
 echo "Installation terminée, il y a deux commandes à retenir :"
