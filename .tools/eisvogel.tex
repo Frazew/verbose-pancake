@@ -250,6 +250,7 @@ $if(beamer)$
 $endif$
 $if(listings)$
 \usepackage{listings}
+\newcommand{\shellcmd}[1]{\small\ttfamily{}\linespread{1.15}\textcolor[rgb]{1.00,1.00,1.00}{\underline{\textbf{\colorbox[rgb]{0.20,0.20,0.20}{#1}}}}}
 \newcommand{\passthrough}[1]{#1}
 $endif$
 $if(lhs)$
