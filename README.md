@@ -28,8 +28,10 @@ Les commandes utiles sont les suivantes :
 
 1. Vous clonez le dépot `git clone https://github.com/Frazew/verbose-pancake.git`.
 2. Vous exécutez `./install.sh` et indiquez le nom du CTF et votre pseudo.
+4. Vous sourcez `source.sh` avec `. source.sh`
 3. Vous exécutez `mkwriteup example_writeup1 "Example de writeup 1"`.
 4. Vous modifiez example_writeup1.md comme vous voulez
 5. Vous générez le pdf avec `genpdf`
 6. ???
 7. Enjoy!
+(8. Retour à l'étape 4 pour faire d'autres writeups sur ce même ctf)
