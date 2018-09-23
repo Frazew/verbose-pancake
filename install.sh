@@ -8,7 +8,7 @@ function setup_template() {
 echo "Installation automagique d'un environnement pandoc swaggué"
 echo "pour les writups de CTF HackademINT"
 echo
-if lsb_release -c | grep "sstretch" > /dev/null; then
+if lsb_release -c | grep "stretch" > /dev/null; then
 	echo "Debian stretch detecté, parfait"
 	echo
 else
