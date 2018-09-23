@@ -28,10 +28,20 @@ Les commandes utiles sont les suivantes :
 
 1. Vous clonez le dépot `git clone https://github.com/Frazew/verbose-pancake.git`.
 2. Vous exécutez `./install.sh` et indiquez le nom du CTF et votre pseudo.
-4. Vous sourcez `source.sh` avec `. source.sh`
-3. Vous exécutez `mkwriteup example_writeup1 "Example de writeup 1"`.
-4. Vous modifiez example_writeup1.md comme vous voulez
-5. Vous générez le pdf avec `genpdf`
-6. ???
-7. Enjoy!
-8. (Retour à l'étape 4 pour faire d'autres writeups sur ce même ctf)
+3. Vous sourcez `source.sh` avec `. source.sh`
+4. Vous exécutez `mkwriteup example_writeup1 "Example de writeup 1"`.
+5. Vous modifiez example_writeup1.md comme vous voulez
+6. Vous générez le pdf avec `genpdf`
+7. ???
+8. Enjoy!
+9. (Retour à l'étape 4 pour faire d'autres writeups sur ce même ctf)
+
+
+## Syntaxe inline
+
+En Markdown, il est possible de spécifier qu'un bout de texte doit être traité comme du "code" avec la syntaxe `` `mon code` ``.
+pandoc va alors gérer automatiquement la mise en forme syntaxique en fonction du langage détecté, ce qui peut s'avérer gênant.
+
+Il est possible de préciser le langage utilisé : `` `moncode`{.java} ``, mais pas de désactiver complètement la mise en forme, ce qui sert par exemple pour afficher une simple commande.
+
+Ce template s'en chargera, tout code de la forme `` `moncode`{.bash} `` sera traité comme une ligne de commande et affiché en tant que tel !
