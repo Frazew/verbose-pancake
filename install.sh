@@ -30,6 +30,8 @@ fi
 
 sudo apt-get install pandoc texlive texlive-fonts-extra texlive-latex-extra texlive-xetex texlive-math-extra texlive-luatex
 
+wget https://github.com/jgm/pandoc/releases/download/2.3/pandoc-2.3-1-amd64.deb -O /tmp/pandoc.deb && sudo dpkg -i /tmp/pandoc.deb && rm /tmp/pandoc.deb
+
 echo "Si tout s'est bien passé, l'environnement de base est prêt"
 echo "On peut maintenant sourcer source.sh"
 . source.sh
