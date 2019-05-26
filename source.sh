@@ -4,8 +4,9 @@ if [ "$0" = "$BASH_SOURCE" ]; then
 	exit 1
 fi
 
-export TOOLS_PATH=$(pwd)/.tools/
-alias genpdf="$(pwd)/.tools/genpdf.sh"
+SCRIPT_PATH=$(dirname $(realpath -s $0))
+export TOOLS_PATH="$SCRIPT_PATH/.tools"
+alias genpdf="$TOOLS_PATH/genpdf.sh"
 
 mkwriteup() {
 	if [ $# -lt 2 ]; then echo "mkwriteup <nom_fichier> <nom_chall>"
